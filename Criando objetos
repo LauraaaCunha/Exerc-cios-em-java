@@ -1,0 +1,15 @@
+public class Main { //cria a classe main
+  int x = 5; //como nao tem static na frente ele depende dos obj
+
+  public static void main(String[] args) { 
+//public Significa que o método pode ser acessado por qualquer outra classe
+//O método main é estático para que possa ser chamado sem precisar criar um objeto da classe.
+//void Significa que o método não retorna nenhum valor.
+//(String[] args)
+
+    Main myObj = new Main(); //new Main(); cria uma instância (objeto) da classe Main.
+//myObj → Nome da variável que armazenará o objeto.
+
+    System.out.println(myObj.x);
+  }
+}
