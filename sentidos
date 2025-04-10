@@ -1,0 +1,19 @@
+public class sentidos {
+    public static void main(String[] args) {
+
+String[ ] acoes = {"beijo", "abraço", "carinho", "mordida"};
+String[ ] corpo = {"boca", "Buchecha", "queixo", "barriga"};
+
+int tamanho = acoes.length; 
+int tamanho_dois = corpo.length; 
+
+System.out.println(tamanho + " ações");
+System.out.println(tamanho_dois + " corpo");
+
+int rand = (int) (Math.random() * tamanho);  
+
+String frase = "um " + acoes[rand] + " no(a) " + corpo[rand]; 
+
+System.out.println(frase);
+}
+}
