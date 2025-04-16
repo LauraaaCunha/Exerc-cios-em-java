@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+class Main {
+    public static void main(String[] args) {
+        	Scanner ler = new Scanner(System.in);
+ArrayList<Integer>listaInteiros = new ArrayList<Integer>();
+int elemento = 0;
+
+for(int i = 0; i<3; i++){
+System.out.printf("diga o elemento na posição %d : ", (i+1));
+elemento = ler.nextInt();
+
+listaInteiros.add(elemento);
+}
+
+for(int i = 0; i<3; i++){
+
+System.out.println("elementos: " + listaInteiros.get(i));
+}
+
+for(int i = 0; i<listaInteiros.size(); i++){
+
+if(listaInteiros.get(i)%2==0){
+    listaInteiros.remove(i);
+}
+System.out.println("elementos negativos " + listaInteiros.get(i));
+
+}
+    
+}
+    }
