@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+class Main {
+    public static void main(String[] args) {
+        	Scanner ler = new Scanner(System.in);
+ArrayList<String> listaNomes = new ArrayList<String>();
+ArrayList<String> grupo_Um = new ArrayList<String>();
+
+String nome;
+
+for(int i=0; i<5; i++){
+    System.out.printf("diga os nomes, posição %d ", (i+1));
+    nome = ler.next();
+    
+    listaNomes.add(nome);
+}
+
+for(int i=0; i<5; i++){
+if(listaNomes.get(i).charAt(0) == 'A' || listaNomes.get(i).charAt(0) == 'B'){
+    grupo_Um.add(listaNomes.get(i));
+}
+    }
+    
+        System.out.println("elementos que começam com A ou B: "+ grupo_Um);
+
+
+}
+
+
+
+}
+    
