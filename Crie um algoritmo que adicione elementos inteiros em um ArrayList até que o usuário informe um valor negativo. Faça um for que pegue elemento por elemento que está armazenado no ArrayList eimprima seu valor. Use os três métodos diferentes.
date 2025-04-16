@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+class Main {
+    public static void main(String[] args) {
+        	Scanner ler = new Scanner(System.in);
+        	int num = 0;
+
+ArrayList<Integer>listaDeinteiros = new ArrayList<Integer>();
+
+do{
+    System.out.println("diga um numero ");
+    	num = ler.nextInt();
+    	
+    	  if (num >= 0) {
+                listaDeinteiros.add(num);
+            }
+            
+} while    (num>=0);
+
+
+for(int i = 0; i<listaDeinteiros.size(); i++){
+System.out.println("lista de elementos: " + listaDeinteiros.get(i));
+    
+}
+
+    
+}
+    }
