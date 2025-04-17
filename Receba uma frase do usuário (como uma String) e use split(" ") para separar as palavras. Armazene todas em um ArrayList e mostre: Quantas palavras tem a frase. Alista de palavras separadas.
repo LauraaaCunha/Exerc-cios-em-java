@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+    Scanner ler = new Scanner(System.in);
+    String frase;
+    ArrayList<String> listaPalvras = new ArrayList<String>();
+    
+    System.out.println("diga a frase ");
+    frase = ler.nextLine();
+    String[] palavras = frase.split(" "); //ta dizendo que é pra dividir e guardar em palavras toda vez que ver um espaço em branco
+for(String guarda : palavras){
+    
+    listaPalvras.add(guarda);
+    
+}
+
+System.out.println("Número de palavras: " + listaPalvras.size());
+System.out.println("Palavras: " + listaPalvras);
+
+    }
+}
