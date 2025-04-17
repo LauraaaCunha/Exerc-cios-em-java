@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+    Scanner ler = new Scanner(System.in);
+    ArrayList <String> tarefas = new ArrayList <String>();
+    ArrayList<Boolean> status = new ArrayList <Boolean>();
+    int qtd_tarefas;
+    String tarefas_variavel;
+    Boolean status_variavel;
+    
+    System.out.println("qts tarefas para realizar? ");
+    qtd_tarefas = ler.nextInt();
+    
+    
+    for(int i = 0; i<qtd_tarefas; i++){
+        System.out.printf("diga a tarefa %d ", (i+1));
+        tarefas_variavel = ler.next();
+        tarefas.add(tarefas_variavel);
+}
+
+    for(int i = 0; i<qtd_tarefas; i++){
+
+System.out.printf("diga o status da tarefa %d (true/false) ", (i+1));
+        status_variavel = ler.nextBoolean();
+        status.add(status_variavel);
+        
+    }
+    
+    for(int i = 0; i<qtd_tarefas; i++){
+            
+            if(status.get(i).equals(true)){ //porque status é uma lista e é p comparar o valor de um item específico da lista
+        System.out.println("tarefa concluida: " + tarefas.get(i));
+            }else if(status.get(i).equals(false)){
+                
+        System.out.println("tarefa pendente: " + tarefas.get(i));
+            }
+            }
+}
+    
+    }
