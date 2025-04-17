@@ -1,0 +1,97 @@
+import java.util.Scanner;
+
+public class array_um
+ {
+    public static void main(String[] args) { 
+    Scanner ler = new Scanner(System.in);
+    
+    float media = 0;
+
+    String[] nome = new String [5];
+    String[] nome_bem_sucedido = new String [4]; //deu relativamente errado por conta do tamanho fixo do array
+    String[] nome_mal_sucedido = new String [4]; //deu relativamente errado por conta do tamanho fixo do array/ ver como fzr array string sem tamanho fixo
+    String nome_usou_menos;
+    nome_usou_menos = " ";
+    String[] bem_sucedido = new String [4];
+    String nome_maior;
+    nome_maior = " ";
+    String nome_menor;
+    nome_menor = " ";
+    
+    float[] velocidade_inicial = new float[4];
+    float velo_maior = velocidade_inicial[0];
+    float velo_menor = velocidade_inicial[0];
+    int[] combustivel = new int [4];
+    int usou_menos = combustivel[0];
+    int[] temp_motor = new int [4];
+    int[] temp_orbita = new int [4];
+   
+        
+        for (int i = 0; i < velocidade_inicial.length; i++) {
+System.out.printf("qual é o nome do foguete %d ", i+1);
+            nome[i] = ler.next();
+            
+System.out.println("qual é a temp do motor? ");
+            temp_motor[i] = ler.nextInt();
+            
+System.out.println("Digite a velocidade: ");
+            velocidade_inicial[i] = ler.nextFloat();
+            
+System.out.println("tempo em orbita: ");
+            temp_orbita[i] = ler.nextInt();
+            
+                    if(velocidade_inicial[i]>velo_maior){
+                    velo_maior = velocidade_inicial[i];
+                    nome_maior = nome[i];
+                    }
+
+                    if(velocidade_inicial[i]<velo_menor){
+                    velo_menor = velocidade_inicial[i];
+                    nome_menor = nome[i];
+                    }
+                    
+System.out.println("o lançamento foi bem sucedido? ");
+            bem_sucedido[i] = ler.next();
+            
+            
+                    if(bem_sucedido[i].equals("sim")){
+                       nome_bem_sucedido[i] = nome[i];
+                    } else if(bem_sucedido[i].equals("nao")){
+                       nome_mal_sucedido[i] = nome[i];
+                    } 
+            
+System.out.println("usou quanto de combustivel? ");
+            combustivel[i] = ler.nextInt();
+            
+
+                    if(combustivel[i]<usou_menos){
+                    usou_menos = combustivel[i];
+                    nome_usou_menos = nome[i];
+                            }
+            
+            media = media + velocidade_inicial[i];
+        }
+        
+        
+        media = media/velocidade_inicial.length;
+        
+        //relatorio
+        for (int i = 0; i < velocidade_inicial.length; i++) {
+System.out.printf("Foguete nome %s %n Velocidade inicial %f %n Temp motor %d %n Combustível %d %n Tempo em Orbita %d %n Lançamento bem sucedido? %s %n ", nome[i], velocidade_inicial[i], temp_motor[i], combustivel[i], temp_orbita[i], bem_sucedido[i]);
+System.out.println("---------------------------------------------------"); 
+        
+        }
+System.out.println("---------------------------------------------------"); 
+
+System.out.printf("media: %f %n maior velocidade: %f da pessoa %s %n menor velocidade: %f da pessoa %s quem usou menos combustivel foi %s que usou %d de combutivel ", media, velo_maior, nome_maior, velo_menor, nome_menor, nome_usou_menos, usou_menos);
+       
+  
+        for(String passa : nome_bem_sucedido){
+System.out.println("foguetes bem sucedidos: " + passa);
+    }
+        for(String passa_dois : nome_mal_sucedido){
+System.out.println("foguetes mal sucedidos: " + passa_dois);
+    }
+        
+    }
+}
