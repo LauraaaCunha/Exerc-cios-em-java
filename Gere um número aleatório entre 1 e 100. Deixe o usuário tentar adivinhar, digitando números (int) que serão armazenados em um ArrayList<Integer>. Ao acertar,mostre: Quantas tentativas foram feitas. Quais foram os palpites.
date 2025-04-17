@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
+
+
+class Main {
+    public static void main(String[] args) {
+    Scanner ler = new Scanner(System.in);
+  int num;
+  int tentativas = 0;
+  Random random = new Random();  // Cria uma instância de Random;
+  
+  int numero_aleatorio = random.nextInt(5);
+  
+  ArrayList <Integer> numeros = new ArrayList <Integer>();
+  
+do{
+  System.out.println("diga um numero: ");
+  num = ler.nextInt();
+  
+  numeros.add(num);
+  tentativas++; 
+  
+} while(numero_aleatorio != num);
+  
+
+
+System.out.println("tentativas: \n "+ tentativas);
+System.out.println("palpites: " + numeros);
+    
+    }
+    }
