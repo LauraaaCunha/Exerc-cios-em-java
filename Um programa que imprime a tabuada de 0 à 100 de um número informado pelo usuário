@@ -1,0 +1,15 @@
+usuário
+import java.util.Scanner;
+public class tabuada {
+	public static void main(String[] args) {
+	Scanner ler = new Scanner(System.in);
+int num;
+        System.out.println("diga o número ");
+	num = ler.nextInt();
+		for(int i=0; i<=10; i++){
+		int result = num * i;
+		System.out.printf("%d ", result);
+}
+ ler.close();	
+    }
+}
