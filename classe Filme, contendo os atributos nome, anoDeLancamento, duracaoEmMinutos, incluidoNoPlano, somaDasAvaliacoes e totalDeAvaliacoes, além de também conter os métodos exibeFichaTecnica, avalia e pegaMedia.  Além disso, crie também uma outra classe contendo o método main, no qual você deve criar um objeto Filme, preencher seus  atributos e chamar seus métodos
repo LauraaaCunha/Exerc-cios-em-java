@@ -1,0 +1,56 @@
+
+import java.util.Scanner;
+
+public class Alura {
+
+    public static void main(String[] args) {
+
+            Scanner ler = new Scanner(System.in);
+            
+         Filme filme_um = new Filme();
+
+         filme_um.nome = "Moana 2";
+         filme_um.ano_lancamento = 2024;
+         filme_um.totalDeAvaliacoes = 3;
+
+         //demais informações seguem essa logica
+         
+         filme_um.exibeFichaTecnica();
+         filme_um.avalia(1);
+         filme_um.avalia(3);
+         filme_um.avalia(4);
+
+
+        System.out.println("média: "+filme_um.pegaMedia());
+    }
+}
+
+
+
+e daí em outro arquivo/ faz em outro arquivo pq a classe Filme precisa ser pública e em seu próprio arquivo: 
+
+public class Filme {
+    
+    String nome;
+    int ano_lancamento;
+    float duracao_min;
+    String incluidoNoPlano;
+    int somaDasAvaliacoes;
+    int totalDeAvaliacoes;
+    
+     void exibeFichaTecnica()
+    {
+        System.out.printf("ficha tecnica: %s, %d, %f, %s, %d, %d ", nome, ano_lancamento, duracao_min, incluidoNoPlano, somaDasAvaliacoes, totalDeAvaliacoes);
+    }
+    
+     void avalia(double nota) {
+    somaDasAvaliacoes += nota;
+    totalDeAvaliacoes++;
+}
+    
+     double pegaMedia(){
+            return somaDasAvaliacoes / totalDeAvaliacoes;
+    
+    }
+    
+}
