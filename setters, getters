@@ -1,0 +1,61 @@
+package com.mycompany.alura_classes;
+
+public class ContaBancaria {
+    private int numeroConta;
+    private int saldo;
+    private int titular;
+    
+    public int getnumeroConta(){
+    return numeroConta;
+    }
+    
+    public int getsaldo(){
+    return saldo;
+    }
+    
+    public int gettitular(){
+    return titular;
+    }
+    
+    public void setnumeroConta(int numeroConta){
+        this.numeroConta = numeroConta;
+    }
+    
+        public void setsaldo(int saldo){
+            this.saldo = saldo;
+        }
+        
+        public void settitular(int titular){
+            this.titular = titular;
+        }
+}
+
+
+
+
+
+
+
+
+
+public class Alura_Classes {
+
+    public static void main(String[] args) {
+
+        ContaBancaria contaBancaria_um = new ContaBancaria();
+        
+        contaBancaria_um.setnumeroConta(5);
+        contaBancaria_um.setsaldo(10);
+        contaBancaria_um.settitular(38);
+        
+        int mostra_numero = contaBancaria_um.getnumeroConta();
+        int mostra_saldo = contaBancaria_um.getsaldo();
+        int mostra_titular = contaBancaria_um.gettitular();
+        
+        System.out.println(mostra_numero);
+                System.out.println(mostra_saldo);
+        System.out.println(mostra_titular);
+
+        
+    }
+}
