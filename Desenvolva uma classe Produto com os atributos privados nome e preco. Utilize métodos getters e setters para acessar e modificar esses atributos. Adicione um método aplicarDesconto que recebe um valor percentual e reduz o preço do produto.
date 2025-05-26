@@ -1,0 +1,40 @@
+public class Produto {
+
+    private String nome;
+    private double preco;
+
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setpreco(int preco){
+        this.preco = preco;
+    }
+
+    public double aplicarDesconto(double percentual){
+        preco = preco - (preco * (percentual / 100));
+        return preco;
+    }
+}
+
+
+
+public class Alura_Classes {
+
+    public static void main(String[] args) {
+
+        Produto produto_um = new Produto();
+
+        produto_um.setNome("lau");
+        produto_um.setpreco(500);
+        String pega_nome = produto_um.getNome();
+
+        double blabla = produto_um.aplicarDesconto(20);
+
+        System.out.println(blabla);
+    }
+}
