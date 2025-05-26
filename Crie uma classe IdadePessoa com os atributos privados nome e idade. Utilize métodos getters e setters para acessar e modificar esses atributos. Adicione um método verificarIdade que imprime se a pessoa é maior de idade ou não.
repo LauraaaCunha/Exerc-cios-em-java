@@ -1,0 +1,51 @@
+public class IdadePessoa {
+
+    private String nome;
+    private int idade;
+
+    public String getNome(){
+        return nome;
+    }
+
+    public int getIdade(){
+        return idade;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+
+    public void verificarIdade(){
+        if(idade < 18){
+            System.out.println("menor de idade ");
+        } else {
+            System.out.println("maior de idade");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+public class Alura_Classes {
+
+    public static void main(String[] args) {
+
+        IdadePessoa idade_um = new IdadePessoa();
+
+        idade_um.setIdade(18);
+        idade_um.setNome("laura");
+
+        int pega_idade = idade_um.getIdade();
+        String pega_nome = idade_um.getNome();
+        idade_um.verificarIdade();
+    }
+}
